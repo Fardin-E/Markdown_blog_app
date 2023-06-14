@@ -1,13 +1,10 @@
 import * as config from '$lib/config'
 
-
-
 export async function GET({ fetch }) {
 	const response = await fetch('api/posts')
 
 	/**@return {import('$lib/types').Post} */
-    const posts = await response.json();
-
+	const posts = await response.json()
 
 	const headers = { 'Content-Type': 'application/xml' }
 

@@ -1,18 +1,18 @@
 <script>
-	import { navigating  } from '$app/stores';
-    import { fade } from 'svelte/transition'
+	import { navigating } from '$app/stores'
+	import { fade } from 'svelte/transition'
 
-    export let url = '';
+	export let url = ''
 </script>
 
 {#key url}
-    <div class="transition" in:fade>
-        <slot />
-    </div>
+	<div class="transition" in:fade>
+		<slot />
+	</div>
 {/key}
 
 <style>
-    .transition {
-        height: 100%;
-    }
+	.transition {
+		height: 100%;
+	}
 </style>
